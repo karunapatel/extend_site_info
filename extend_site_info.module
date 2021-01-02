@@ -1,0 +1,16 @@
+<?php
+/**
+* @file
+* extend_site_info.module
+*/
+use Drupal\Core\Form\FormStateInterface;
+
+/*
+ * HOOK_form_alter
+ */
+function extend_site_info_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+	if($form_id == 'system_site_information_settings'){
+		$form['actions']['submit']['#value'] = 'Update Configuration';
+	}
+}

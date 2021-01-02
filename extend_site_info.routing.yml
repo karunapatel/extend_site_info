@@ -1,0 +1,10 @@
+extend_site_info.page_json:
+  path: '/page_json/{siteapikey}/{nid}'
+  defaults: 
+    _controller: '\Drupal\extend_site_info\Controller\GeneralController::get_node_json_of_page'
+    _title: 'JSON api'
+  methods: [GET]
+  siteapikey: ''
+  nid: '[0-9]+'
+  requirements:
+    _access: 'TRUE'
